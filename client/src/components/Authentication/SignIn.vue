@@ -16,7 +16,7 @@
         <span class="icon is-small is-left">
           <i class="fas fa-lock"></i>
         </span>
-        <input class="input" type="password" placeholder="Enter Password">
+        <input class="input" type="password" :value="password" placeholder="Enter Password">
       </div>
     </div>
   </div>
@@ -24,7 +24,10 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import { mapActions, mapMutations, mapState } from "vuex";
 
 @Component({})
-export default class SignIn extends Vue {}
+export default class SignIn extends Vue {
+  ...mapState()
+}
 </script>
