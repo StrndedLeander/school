@@ -22,9 +22,9 @@
   </div>
 </template>
 
-<script>
-export default {};
-</script>
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
 
-<style scoped>
-</style>
+@Component({})
+export default class SignIn extends Vue {}
+</script>
