@@ -1,37 +1,42 @@
-import { Module, VuexModule, Mutation, Action } from "vuex-module-decorators";
-import { SignIn } from "../interfaces/users/signIn.interface";
-import { SignUp } from "../interfaces/users/signUp.interface";
+import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
+import { Login } from '../interfaces/users/Login.interface';
+import { Register } from '../interfaces/users/Register.interface';
 
 @Module
 export default class Auth extends VuexModule {
-  signIn: SignIn = { username: "", password: "" };
-  signUp: SignUp = { name: "", username: "", email: "", password: "" };
+  private login: Login = { username: '', password: '' };
+  private register: Register = {
+    name: '',
+    username: '',
+    email: '',
+    password: ''
+  };
 
   @Mutation
-  setUsernameSignIn(username: string) {
-    this.signIn.username = username;
-  }
-
-  @Mutation
-  setPasswordSignIn(password: string) {
-    this.signIn.password = password;
-  }
-  @Mutation
-  setUsernameSignUp(username: string) {
-    this.signUp.username = username;
+  public setUsernameLogin(username: string) {
+    this.login.username = username;
   }
 
   @Mutation
-  setPasswordSignUp(password: string) {
-    this.signUp.password = password;
+  public setPasswordLogin(password: string) {
+    this.login.password = password;
   }
   @Mutation
-  setNameSignUp(name: string) {
-    this.signUp.name = name;
+  public setUsernameRegister(username: string) {
+    this.register.username = username;
   }
 
   @Mutation
-  setEmailSignUp(email: string) {
-    this.signUp.email = email;
+  public setPasswordRegister(password: string) {
+    this.register.password = password;
+  }
+  @Mutation
+  public setNameRegister(name: string) {
+    this.register.name = name;
+  }
+
+  @Mutation
+  public setEmailRegister(email: string) {
+    this.register.email = email;
   }
 }

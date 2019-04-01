@@ -1,4 +1,4 @@
-export interface SignUp {
+export interface Register {
   name: string;
   username: string;
   email: string;
