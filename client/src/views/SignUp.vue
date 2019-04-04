@@ -23,16 +23,19 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Login from "../components/Authentication/Login";
-import Register from "../components/Authentication/Register";
+import Login from "@/components/Authentication/Login";
+import Register from "@/components/Authentication/Register";
+
+@Component({
+  components: {
+    Login,
+    Register
+  }
+})
 export default class SignUp extends Vue {
-  components = {
-    Login;
-    Register;
-  };
   isLogin: Boolean = true;
 
-  toggleSignMethod(): void {
+  toggleSignMethod() {
     if (this.isLogin == true) {
       this.isLogin = false;
     } else {

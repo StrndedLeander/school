@@ -33,9 +33,9 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import { mapActions, mapMutations, mapState } from "vuex";
+// import { Component, Vue } from "vue-property-decorator";
+// import { mapActions, mapMutations, mapState } from "vuex";
 
-@Component({})
-export default class Login extends Vue {}
+// @Component({})
+// export default class Login extends Vue {}
 </script>

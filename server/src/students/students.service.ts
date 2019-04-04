@@ -9,15 +9,15 @@ export class StudentsService {
     @InjectModel('Student') private readonly studentModel: Model<Student>,
   ) {}
 
-  async findAllFromUnity(unityID: string): Promise<Student[]> {
-    return await this.studentModel.find({ unities: { $all: unityID } });
-  }
+  // async findAllFromUnity(unityID: string): Promise<Student[]> {
+  //   return await this.studentModel.find({ unities: { $all: unityID } });
+  // }
 
-  async findAllFromGroup(groupID: string): Promise<Student[]> {
-    return await this.studentModel.find({ groups: { $all: groupID } });
-  }
+  // async findAllFromGroup(groupID: string): Promise<Student[]> {
+  //   return await this.studentModel.find({ groups: { $all: groupID } });
+  // }
 
-  async findOne(studentID: string): Promise<Student> {
+  async findStudent(studentID: string): Promise<Student> {
     return await this.studentModel.findById(studentID);
   }
 

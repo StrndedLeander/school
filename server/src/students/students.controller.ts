@@ -16,19 +16,19 @@ import { create } from 'domain';
 export class StudentsController {
   constructor(private readonly studentsService: StudentsService) {}
 
-  @Get(':unityID')
-  findAllFromUnity(@Param('unityID') unityID): Promise<Student[]> {
-    return this.studentsService.findAllFromUnity(unityID);
-  }
+  // @Get(':unityID')
+  // findAllFromUnity(@Param('unityID') unityID): Promise<Student[]> {
+  //   return this.studentsService.findAllFromUnity(unityID);
+  // }
 
-  @Get(':groupID')
-  findAllFromGroup(@Param('groupID') groupID): Promise<Student[]> {
-    return this.studentsService.findAllFromGroup(groupID);
-  }
+  // @Get(':groupID')
+  // findAllFromGroup(@Param('groupID') groupID): Promise<Student[]> {
+  //   return this.studentsService.findAllFromGroup(groupID);
+  // }
 
   @Get(':studentID')
   findOne(@Param('studentID') studentID) {
-    return this.studentsService.findOne(studentID);
+    return this.studentsService.findStudent(studentID);
   }
 
   @Post()

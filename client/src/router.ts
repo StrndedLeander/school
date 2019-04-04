@@ -8,11 +8,15 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Dashboard,
+      component: Dashboard
     },
     {
       path: '/sign',
-      component: () => import('./views/SignUp.vue'),
+      component: () => import('./views/SignUp.vue')
     },
-  ],
+    {
+      path: '/students',
+      component: () => import('./views/StudentMgmt.vue')
+    }
+  ]
 });

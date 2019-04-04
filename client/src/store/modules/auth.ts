@@ -1,9 +1,9 @@
 import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
-import { Login } from '../interfaces/users/Login.interface';
-import { Register } from '../interfaces/users/Register.interface';
+import { Login } from '../../interfaces/users/Login.interface';
+import { Register } from '../../interfaces/users/Register.interface';
 import store from 'src/store';
 
-@Module({ dynamic: true, store: store, name: 'auth'})
+@Module({ dynamic: true, store: store, name: 'auth' })
 export default class Auth extends VuexModule {
   private login: Login = { username: '', password: '' };
   private register: Register = {
