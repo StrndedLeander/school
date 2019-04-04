@@ -1,6 +1,7 @@
 <template lang="html">
+<div class="sign">
   <div v-if="isLogin">
-    <Login></Login>
+    <!-- <Login></Login> -->
     <div class="field">
       <div class="control">
         <button class="button is-text" @click="toggleSignMethod">
@@ -8,8 +9,9 @@
         </button>
       </div>
     </div>
+    </div>
     <div v-else>
-      <Register></Register>
+      <!-- <Register></Register> -->
       <div class="field">
         <div class="control">
           <button class="button is-text" @click="toggleSignMethod">
@@ -23,17 +25,17 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Login from "@/components/Authentication/Login";
-import Register from "@/components/Authentication/Register";
+// import Login from "@/components/Authentication/Login";
+// import Register from "@/components/Authentication/Register";
 
 @Component({
-  components: {
-    Login,
-    Register
-  }
+  // components: {
+  //   Login,
+  //   Register
+  // }
 })
-export default class SignUp extends Vue {
-  isLogin: Boolean = true;
+export default class Sign extends Vue {
+  isLogin: boolean = true;
 
   toggleSignMethod() {
     if (this.isLogin == true) {

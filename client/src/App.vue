@@ -12,6 +12,7 @@ import {
   faDownload
 } from "@fortawesome/fontawesome-free-solid";
 fontawesome.library.add(faUser, faCheck, faDownload);
+
 import "bulma";
 
 @Component

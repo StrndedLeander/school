@@ -12,7 +12,7 @@ export default new Router({
     },
     {
       path: '/sign',
-      component: () => import('./views/SignUp.vue')
+      component: () => import('./views/Sign.vue')
     },
     {
       path: '/students',

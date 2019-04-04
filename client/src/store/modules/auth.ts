@@ -1,10 +1,18 @@
-import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
+import {
+  Module,
+  VuexModule,
+  Mutation,
+  Action,
+  getModule
+} from 'vuex-module-decorators';
 import { Login } from '../../interfaces/users/Login.interface';
 import { Register } from '../../interfaces/users/Register.interface';
 import store from 'src/store';
+import { AuthReqs } from 'src/serverReqs/authReqs';
 
-@Module({ dynamic: true, store: store, name: 'auth' })
-export default class Auth extends VuexModule {
+@Module({ namespaced: true, name: 'auth', store })
+class AuthModule extends VuexModule {
+  reqs: AuthReqs = new AuthReqs();
   private login: Login = { username: '', password: '' };
   private register: Register = {
     name: '',
@@ -12,6 +20,13 @@ export default class Auth extends VuexModule {
     email: '',
     password: ''
   };
+
+  @Action
+  signIn() {
+    this.reqs.signIn().then((res) => {
+      console.log(res);
+    });
+  }
 
   @Mutation
   public setUsernameLogin(username: string) {
@@ -41,3 +56,5 @@ export default class Auth extends VuexModule {
     this.register.email = email;
   }
 }
+
+export default getModule(AuthModule);

@@ -5,8 +5,8 @@ import {
   Action,
   getModule
 } from 'vuex-module-decorators';
-import store from '../../store';
-import { StudentsReqs } from '../../serverReqs/studentsReqs';
+import store from '../../../store';
+import { StudentsReqs } from '../../../serverReqs/studentsReqs';
 
 @Module({
   namespaced: true,
@@ -15,7 +15,6 @@ import { StudentsReqs } from '../../serverReqs/studentsReqs';
 })
 class StudentModule extends VuexModule {
   req: StudentsReqs = new StudentsReqs();
-  id: string = '';
   student: Object = {};
 
   @Action

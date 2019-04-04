@@ -6,7 +6,7 @@
         <span class="icon is-small is-left">
           <i class="fas fa-user"></i>
         </span>
-        <input class="input" type="text" placeholder="Enter Username" />
+        <input class="input" type="text" placeholder="Enter Username">
       </div>
     </div>
 
@@ -16,12 +16,7 @@
         <span class="icon is-small is-left">
           <i class="fas fa-lock"></i>
         </span>
-        <input
-          class="input"
-          type="password"
-          :value="password"
-          placeholder="Enter Password"
-        />
+        <input class="input" type="password" :value="password" placeholder="Enter Password">
       </div>
     </div>
 
@@ -33,9 +28,16 @@
   </div>
 </template>
 <script lang="ts">
-// import { Component, Vue } from "vue-property-decorator";
-// import { mapActions, mapMutations, mapState } from "vuex";
+import { Component, Vue } from "vue-property-decorator";
+import auth from "../../store/modules/auth";
 
-// @Component({})
-// export default class Login extends Vue {}
+@Component({})
+export default class Login extends Vue {
+  username: string = "";
+  password: string = "";
+
+  login() {
+    auth.signIn();
+  }
+}
 </script>
