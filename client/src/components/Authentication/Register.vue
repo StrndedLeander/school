@@ -1,13 +1,13 @@
 <template>
-  <div class="register">
+  <div class="register hero">
     <div class="field">
-      <label class="label">Name</label>
+      <label class="label is-pulled-left">Name</label>
       <div class="control">
         <input class="input" type="text" placeholder="Enter your name">
       </div>
     </div>
     <div class="field">
-      <label class="label">Username</label>
+      <label class="label is-pulled-left">Username</label>
       <div class="control has-icons-left">
         <span class="icon is-small is-left">
           <i class="fas fa-user"></i>
@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="field">
-      <label class="label">E-Mail</label>
+      <label class="label is-pulled-left">E-Mail</label>
       <div class="control has-icons-left">
         <span class="icon is-small is-left">
           <i class="fas fa-envelope"></i>
@@ -26,7 +26,7 @@
     </div>
 
     <div class="field">
-      <label class="label">Password</label>
+      <label class="label is-pulled-left">Password</label>
       <div class="control has-icons-left">
         <span class="icon is-small is-left">
           <i class="fas fa-lock"></i>

@@ -1,7 +1,7 @@
 <template>
-  <div class="signIn">
+  <div class="signIn hero">
     <div class="field">
-      <label class="label">Username or E-Mail</label>
+      <label class="label is-pulled-left">Username or E-Mail</label>
       <div class="control has-icons-left">
         <span class="icon is-small is-left">
           <i class="fas fa-user"></i>
@@ -11,7 +11,7 @@
     </div>
 
     <div class="field">
-      <label class="label">Password</label>
+      <label class="label is-pulled-left">Password</label>
       <div class="control has-icons-left">
         <span class="icon is-small is-left">
           <i class="fas fa-lock"></i>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="field">
-      <div class="control">
+      <div class="control centeredControl is-flex">
         <button class="button is-link">Login</button>
       </div>
     </div>
@@ -41,3 +41,9 @@ export default class Login extends Vue {
   }
 }
 </script>
+
+<style scoped>
+.centeredControl {
+  margin: auto;
+}
+</style>
