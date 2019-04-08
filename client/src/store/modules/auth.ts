@@ -7,11 +7,11 @@ import {
 } from 'vuex-module-decorators';
 import { Login } from '../../interfaces/users/Login.interface';
 import { Register } from '../../interfaces/users/Register.interface';
-import store from 'src/store';
-import { AuthReqs } from 'src/serverReqs/authReqs';
+import store from '@/store';
+import { AuthReqs } from '../../serverReqs/authReqs';
 
 @Module({ namespaced: true, name: 'auth', store })
-class AuthModule extends VuexModule {
+export default class AuthModule extends VuexModule {
   reqs: AuthReqs = new AuthReqs();
   private login: Login = { username: '', password: '' };
   private register: Register = {
@@ -56,5 +56,3 @@ class AuthModule extends VuexModule {
     this.register.email = email;
   }
 }
-
-export default getModule(AuthModule);

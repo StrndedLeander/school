@@ -5,7 +5,7 @@ import {
   Action,
   getModule
 } from 'vuex-module-decorators';
-import store from '../../../store';
+import store from '@/store';
 import { StudentsReqs } from '../../../serverReqs/studentsReqs';
 
 @Module({
@@ -13,7 +13,7 @@ import { StudentsReqs } from '../../../serverReqs/studentsReqs';
   name: 'student',
   store
 })
-class StudentModule extends VuexModule {
+export default class StudentModule extends VuexModule {
   req: StudentsReqs = new StudentsReqs();
   student: Object = {};
 
@@ -34,5 +34,3 @@ class StudentModule extends VuexModule {
     this.student = student;
   }
 }
-
-export default getModule(StudentModule);
